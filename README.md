@@ -34,6 +34,7 @@ Model : qwen2.5-coder:7b
 
 ![img_7.png](img/img_7.png)
 
+llama 100 iterations:
 ![img_7.png](img/img_8.png)
 
 
