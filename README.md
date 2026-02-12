@@ -6,3 +6,38 @@
 ![Contributions](https://img.shields.io/badge/contributions-welcome-orange.svg)
 
 Project aimed at testing which Ollama LLM is the most accurate for analyzing Solidity Smart Contracts
+
+
+---
+
+### Results:
+#### 4 labels sur 50:
+
+Model : qwen2.5-coder:7b
+![](img/img.png)
+
+Model :qwen2.5-coder:7b
+![](img/img_1.png)
+
+--- 
+#### 8 labels sur 50:
+Model : qwen2.5-coder:7b
+![](img/img_2.png)
+
+![](img/img_3.png)
+
+![](img/img_4.png)
+
+![img.png](img_5.png)
+
+![img_1.png](img_6.png)
+
+![img_7.png](img_7.png)
+
+![img_7.png](img_8.png)
+
+
+
+
+
+
