@@ -41,33 +41,7 @@ This repository is the **LLM zero-shot baseline** component of our research pape
 
 ## Example Outputs
 
-### 4 labels — qwen2.5-coder:7b (50 contracts)
-
-![4 labels result](img/img.png)
-
-![4 labels distribution](img/img_1.png)
-
----
-
-### 8 labels — qwen2.5-coder:7b (50 contracts)
-
-![8 labels confusion matrix](img/img_2.png)
-
-![8 labels precision breakdown](img/img_3.png)
-
-![8 labels per-class result](img/img_4.png)
-
-![8 labels chart](img/img_5.png)
-
-![8 labels distribution](img/img_6.png)
-
-![8 labels heatmap](img/img_7.png)
-
-### 8 labels — llama3.2 (100 contracts)
-
-![llama 100 iterations](img/img_8.png)
-
-### 📊 Full LLM Benchmark — Paper Results (Table 2)
+### 📊 LLM Benchmark — Paper Results (Table 2)
 
 > Extracted from our research paper. Models tested on a subset of the 8-label dataset via zero-shot prompting. *Italic* = fine-tuned with LoRA.
 
