@@ -18,7 +18,7 @@ CONFIG = {
     "limite": 100,  # <-- CHANGEZ ICI
 
     # Modèle LLM à utiliser
-    "model": "llama3.2",  # <-- CHANGEZ ICI :  llama3.2 / kimi-k2.5:cloud / qwen2.5-coder:7b / qwen3-coder:30b / deepseek-coder:6.7b
+    "model": "tinyllama:1.1b",  # <-- CHANGEZ ICI :  llama3.2 / kimi-k2.5:cloud / qwen2.5-coder:7b / qwen3-coder:30b / deepseek-coder:6.7b
 }
 
 # Mapping des fichiers selon le dataset choisi

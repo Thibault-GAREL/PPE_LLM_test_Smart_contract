@@ -135,7 +135,7 @@ contract SALES is StandardToken {
         if(!_spender.call(bytes4(bytes32(sha3(""receiveApproval(address,uint256,address,bytes)""))), msg.sender, _value, this, _extraData)) { throw; }
         return true;
     }
-}",./Dataset/reentrancy (RE)/,5,8
+}",./Dataset/reentrancy (RE)/,5,1
 1,31454.sol,"pragma solidity ^0.4.4;
 
 contract Token {
@@ -272,7 +272,7 @@ contract EthereumUranium is StandardToken {
         if(!_spender.call(bytes4(bytes32(sha3(""receiveApproval(address,uint256,address,bytes)""))), msg.sender, _value, this, _extraData)) { throw; }
         return true;
     }
-}",./Dataset/reentrancy (RE)/,5,5
+}",./Dataset/reentrancy (RE)/,5,1
 2,40744.sol,"contract SendBalance {
  mapping (address => uint) userBalances ;
  bool withdrawn = false ;
@@ -287,7 +287,7 @@ contract EthereumUranium is StandardToken {
     userBalances[msg.sender] = 0;
  }
 }
-",./Dataset/reentrancy (RE)/,5,5
+",./Dataset/reentrancy (RE)/,5,1
 3,39290.sol,"/**
  * Originally from https://github.com/ConsenSys/MultiSigWallet
  */
@@ -656,7 +656,7 @@ contract MultiSigWallet {
         for (i=from; i<to; i++)
             _transactionIds[i - from] = transactionIdsTemp[i];
     }
-}",./Dataset/reentrancy (RE)/,5,6
+}",./Dataset/reentrancy (RE)/,5,1
 4,39358.sol,"pragma solidity ^0.4.4;
 
 library ArrayLib{
@@ -908,7 +908,7 @@ contract IdentityFactory {
         IdentityCreated(userKey, proxy, controller, recoveryQuorum);
         senderToProxy[msg.sender] = proxy;
     }
-}",./Dataset/reentrancy (RE)/,5,7
+}",./Dataset/reentrancy (RE)/,5,1
 5,45133.sol,"// Copyright (C) 2018  Argent Labs Ltd. <https://argent.xyz>
 
 // This program is free software: you can redistribute it and/or modify
@@ -1197,7 +1197,7 @@ contract WalletFactory is Managed {
         }
     }
 }
-",./Dataset/reentrancy (RE)/,5,4
+",./Dataset/reentrancy (RE)/,5,1
 6,22004.sol,"pragma solidity 0.4.15;
 
 
@@ -1567,7 +1567,7 @@ contract MultiSigWallet {
         for (i=from; i<to; i++)
             _transactionIds[i - from] = transactionIdsTemp[i];
     }
-}",./Dataset/reentrancy (RE)/,5,7
+}",./Dataset/reentrancy (RE)/,5,1
 7,31566.sol,"pragma solidity ^0.4.4;
 
 contract Token {
@@ -1704,7 +1704,7 @@ contract MinerDog is StandardToken {
         if(!_spender.call(bytes4(bytes32(sha3(""receiveApproval(address,uint256,address,bytes)""))), msg.sender, _value, this, _extraData)) { throw; }
         return true;
     }
-}",./Dataset/reentrancy (RE)/,5,5
+}",./Dataset/reentrancy (RE)/,5,1
 8,40366.sol,"// Single-owner wallet that keeps ETC and ETH separately and helps preventing
 // replaying both, incoming and outgoing transactions.
 //
@@ -1814,7 +1814,7 @@ contract BranchSender {
   // Is set to true if and only if we are currently in the ""right"" branch of
   // the blockchain.
   bool public isRightBranch;
-}",./Dataset/reentrancy (RE)/,5,5
+}",./Dataset/reentrancy (RE)/,5,1
 9,32700.sol,"pragma solidity ^0.4.24;
 
 // File: openzeppelin-solidity/contracts/token/ERC20/ERC20Basic.sol
@@ -2102,7 +2102,7 @@ contract MultiBuyer is CanReclaimToken {
             msg.sender.transfer(address(this).balance);
         }
     }
-}",./Dataset/reentrancy (RE)/,5,6
+}",./Dataset/reentrancy (RE)/,5,1
 10,37214.sol,"/**
  * Originally from https://github.com/ConsenSys/MultiSigWallet
  */
@@ -2471,7 +2471,7 @@ contract MultiSigWallet {
         for (i=from; i<to; i++)
             _transactionIds[i - from] = transactionIdsTemp[i];
     }
-}",./Dataset/reentrancy (RE)/,5,7
+}",./Dataset/reentrancy (RE)/,5,1
 11,32969.sol,"pragma solidity ^0.4.17;
 
 
@@ -2588,7 +2588,7 @@ contract DNERO is StandardToken {
         if(!_spender.call(bytes4(bytes32(sha3(""receiveApproval(address,uint256,address,bytes)""))), msg.sender, _value, this, _extraData)) { throw; }
         return true;
     }
-}",./Dataset/reentrancy (RE)/,5,6
+}",./Dataset/reentrancy (RE)/,5,1
 12,670.sol,"pragma solidity ^0.4.24;
 
 // File: openzeppelin-solidity/contracts/token/ERC20/ERC20Basic.sol
@@ -2876,7 +2876,7 @@ contract MultiBuyer is CanReclaimToken {
             msg.sender.transfer(address(this).balance);
         }
     }
-}",./Dataset/reentrancy (RE)/,5,5
+}",./Dataset/reentrancy (RE)/,5,1
 13,40394.sol,"// <ORACLIZE_API>
 /*
 Copyright (c) 2015-2016 Oraclize srl, Thomas Bertani
@@ -3665,7 +3665,7 @@ contract Dice is usingOraclize {
         }
     }
 
-}",./Dataset/reentrancy (RE)/,5,-1
+}",./Dataset/reentrancy (RE)/,5,1
 14,44432.sol,"/* This program is free software. It comes without any warranty, to
 the extent permitted by applicable law. You can redistribute it
 and/or modify it under the terms of the Do What The Fuck You Want
@@ -4018,7 +4018,7 @@ contract Coffers {
 // One of the previous contracts has 2 vulnerabilities.
 // Find which one and describe the second vulnerability.
 
-",./Dataset/reentrancy (RE)/,5,5
+",./Dataset/reentrancy (RE)/,5,1
 15,40357.sol,"contract AmIOnTheFork {
     function forked() constant returns(bool);
 }
@@ -4048,7 +4048,7 @@ contract SellETCSafely {
     function () {
         throw;  // do not accept value transfers
     }
-}",./Dataset/reentrancy (RE)/,5,4
+}",./Dataset/reentrancy (RE)/,5,1
 16,32848.sol,"pragma solidity ^0.4.18;
 
 contract Token {
@@ -4185,7 +4185,7 @@ contract DashConnect is StandardToken {
         if(!_spender.call(bytes4(bytes32(sha3(""receiveApproval(address,uint256,address,bytes)""))), msg.sender, _value, this, _extraData)) { throw; }
         return true;
     }
-}",./Dataset/reentrancy (RE)/,5,7
+}",./Dataset/reentrancy (RE)/,5,1
 17,38972.sol,"/**
  * Originally from https://github.com/ConsenSys/MultiSigWallet
  */
@@ -4554,7 +4554,7 @@ contract MultiSigWallet {
         for (i=from; i<to; i++)
             _transactionIds[i - from] = transactionIdsTemp[i];
     }
-}",./Dataset/reentrancy (RE)/,5,7
+}",./Dataset/reentrancy (RE)/,5,1
 18,39662.sol,"pragma solidity ^0.4.8;
 
 contract IElectricCharger {
@@ -4762,7 +4762,7 @@ contract ElectricQueue  {
           
           return true;
        }
-}",./Dataset/reentrancy (RE)/,5,7
+}",./Dataset/reentrancy (RE)/,5,1
 19,934.sol,"pragma solidity ^0.4.24;
 
 // File: openzeppelin-solidity/contracts/token/ERC20/ERC20Basic.sol
@@ -5050,7 +5050,7 @@ contract MultiBuyer is CanReclaimToken {
             msg.sender.transfer(address(this).balance);
         }
     }
-}",./Dataset/reentrancy (RE)/,5,7
+}",./Dataset/reentrancy (RE)/,5,1
 20,31404.sol,"pragma solidity ^0.4.15;
 
 contract Token {
@@ -5187,7 +5187,7 @@ contract ONUS is StandardToken {
         if(!_spender.call(bytes4(bytes32(sha3(""receiveApproval(address,uint256,address,bytes)""))), msg.sender, _value, this, _extraData)) { throw; }
         return true;
     }
-}",./Dataset/reentrancy (RE)/,5,5
+}",./Dataset/reentrancy (RE)/,5,1
 21,37283.sol,"pragma solidity ^0.4.11;
 
 
@@ -5353,7 +5353,7 @@ contract Test20 is StandardToken {
         return true;
     }
 
-  }",./Dataset/reentrancy (RE)/,5,5
+  }",./Dataset/reentrancy (RE)/,5,1
 22,37945.sol,"pragma solidity ^0.4.11;
 
 contract SafeMath {
@@ -5585,7 +5585,7 @@ contract CrowdSale is PricingMechanism, DAOController{
         isStarted = false;
         multiSig.call.gas(150000).value(this.balance)();
     }
-}",./Dataset/reentrancy (RE)/,5,4
+}",./Dataset/reentrancy (RE)/,5,1
 23,34792.sol,"pragma solidity ^0.4.4;
 
 contract Token {
@@ -5707,7 +5707,7 @@ contract EGAMEToken is StandardToken {
         if(!_spender.call(bytes4(bytes32(sha3(""receiveApproval(address,uint256,address,bytes)""))), msg.sender, _value, this, _extraData)) { revert(); }
         return true;
     }
-}",./Dataset/reentrancy (RE)/,5,5
+}",./Dataset/reentrancy (RE)/,5,1
 24,35374.sol,"contract PreICOin {
   string public constant symbol = ""PreICO"";
   string public constant name = ""PreICOin"";
@@ -5858,7 +5858,7 @@ contract EGAMEToken is StandardToken {
   function allowance(address _owner, address _spender) constant returns (uint256 remaining) {
     return allowed[_owner][_spender];
   }
-}",./Dataset/reentrancy (RE)/,5,8
+}",./Dataset/reentrancy (RE)/,5,1
 25,38551.sol,"contract SafeMath {
     function mul(uint a, uint b) internal returns (uint) {
         uint c = a * b;
@@ -6205,7 +6205,7 @@ contract LATOPreICO {
     function () payable {
         fund();
     }
-}",./Dataset/reentrancy (RE)/,5,4
+}",./Dataset/reentrancy (RE)/,5,1
 26,35509.sol,"pragma solidity 0.4.15;
 
 /// @title Multisignature wallet - Allows multiple parties to agree on transactions before execution.
@@ -6574,7 +6574,7 @@ contract MultiSigWallet {
       Deposit(msg.sender, msg.value);
     }
   }
-}",./Dataset/reentrancy (RE)/,5,6
+}",./Dataset/reentrancy (RE)/,5,1
 27,35875.sol,"pragma solidity ^0.4.16;
 // EROSCOIN Token contract based on the full ERC 20 Token standard
 // https://github.com/ethereum/EIPs/issues/20
@@ -6798,7 +6798,7 @@ contract ECToken is EroStandardToken {
         require(_spender.call(bytes4(bytes32(sha3(""receiveApproval(address,uint256,address,bytes)""))), msg.sender, _value, this, _extraData));
         return true;
     }
-}",./Dataset/reentrancy (RE)/,5,7
+}",./Dataset/reentrancy (RE)/,5,1
 28,34418.sol,"pragma solidity ^0.4.15;
 
 //interface tokenRecipient { function receiveApproval(address _from, uint256 _value, address _token, bytes _extraData); }
@@ -6906,7 +6906,7 @@ contract DealerRights {
            return true;
        }
     }
-}",./Dataset/reentrancy (RE)/,5,5
+}",./Dataset/reentrancy (RE)/,5,1
 29,35722.sol,"contract CoinContract {
   bool private workingState = false;
   address public owner;
@@ -6971,7 +6971,7 @@ contract DealerRights {
     bool ret = false;
     return ret;
   }
-}",./Dataset/reentrancy (RE)/,5,4
+}",./Dataset/reentrancy (RE)/,5,1
 30,39269.sol,"/******************************************************************************\
 
 file:   RegBase.sol
@@ -8306,7 +8306,7 @@ contract BaktFactory is Factory
         kAddr_ = new Bakt(owner, _regName, msg.sender);
         Created(msg.sender, _regName, kAddr_);
     }
-}",./Dataset/reentrancy (RE)/,5,7
+}",./Dataset/reentrancy (RE)/,5,1
 31,21087.sol,"pragma solidity ^0.4.17;
 
 contract TinyProxy {
@@ -8344,7 +8344,7 @@ contract TinyProxyFactory {
     } 
     return proxy;
   }
-}",./Dataset/reentrancy (RE)/,5,6
+}",./Dataset/reentrancy (RE)/,5,1
 32,981.sol,"//author : dm & w
 pragma solidity ^0.4.23;
 
@@ -8673,7 +8673,7 @@ contract Contract is Controller {
 
 		require(individual_cap == 0 || contributor.balance <= individual_cap);
 	}
-}",./Dataset/reentrancy (RE)/,5,7
+}",./Dataset/reentrancy (RE)/,5,1
 33,37498.sol,"pragma solidity ^0.4.15;
 
 contract generic_holder {
@@ -8705,7 +8705,7 @@ contract generic_holder {
         return owner;
     }
     
-}",./Dataset/reentrancy (RE)/,5,7
+}",./Dataset/reentrancy (RE)/,5,1
 34,40461.sol,"// <ORACLIZE_API>
 /*
 Copyright (c) 2015-2016 Oraclize srl, Thomas Bertani
@@ -9259,7 +9259,7 @@ contract Dice is usingOraclize {
         }
     }
    
-}",./Dataset/reentrancy (RE)/,5,-1
+}",./Dataset/reentrancy (RE)/,5,1
 35,35938.sol,"pragma solidity ^0.4.4;
 
 contract Token {
@@ -9394,7 +9394,7 @@ contract ERC20Token is StandardToken {
         if(!_spender.call(bytes4(bytes32(sha3(""receiveApproval(address,uint256,address,bytes)""))), msg.sender, _value, this, _extraData)) { throw; }
         return true;
     }
-}",./Dataset/reentrancy (RE)/,5,5
+}",./Dataset/reentrancy (RE)/,5,1
 36,44864.sol,"// https://etherscan.io/address/0x42d6622dece394b54999fbd73d108123806f6a18#code
 
 // Abstract contract for the full ERC 20 Token standard
@@ -9550,7 +9550,7 @@ contract HumanStandardToken is StandardToken {
         return true;
     }
 }
-",./Dataset/reentrancy (RE)/,5,6
+",./Dataset/reentrancy (RE)/,5,1
 37,21703.sol,"pragma solidity ^0.4.24;
 
 // File: openzeppelin-solidity/contracts/token/ERC20/ERC20Basic.sol
@@ -9838,7 +9838,7 @@ contract MultiBuyer is CanReclaimToken {
             msg.sender.transfer(address(this).balance);
         }
     }
-}",./Dataset/reentrancy (RE)/,5,5
+}",./Dataset/reentrancy (RE)/,5,1
 38,34668.sol,"pragma solidity ^0.4.6;
 
 /*
@@ -10620,7 +10620,7 @@ contract MilestoneTracker {
             throw;
         ProposalStatusChanged(_idMilestone, milestone.status);
     }
-}",./Dataset/reentrancy (RE)/,5,8
+}",./Dataset/reentrancy (RE)/,5,1
 39,39954.sol,"pragma solidity ^0.4.0;
 
 // <ORACLIZE_API>
@@ -11583,7 +11583,7 @@ contract Dice is usingOraclize {
         }
     }
 
-}",./Dataset/reentrancy (RE)/,5,-1
+}",./Dataset/reentrancy (RE)/,5,1
 40,81.sol,"pragma solidity ^0.4.24;
 
 // File: openzeppelin-solidity/contracts/token/ERC20/ERC20Basic.sol
@@ -11871,7 +11871,7 @@ contract MultiBuyer is CanReclaimToken {
             msg.sender.transfer(address(this).balance);
         }
     }
-}",./Dataset/reentrancy (RE)/,5,7
+}",./Dataset/reentrancy (RE)/,5,1
 41,32088.sol,"pragma solidity ^0.4.18;
 
 library SafeMath {
@@ -12204,7 +12204,7 @@ contract Crowdsale is Owned, PayloadSize {
         }
         require(msg.sender.call.gas(3000000).value(givenAmount)());
     }
-}",./Dataset/reentrancy (RE)/,5,6
+}",./Dataset/reentrancy (RE)/,5,1
 42,39268.sol,"pragma solidity ^0.4.9;
 
 contract TownCrier {
@@ -12416,7 +12416,7 @@ contract TownCrier {
             return FAIL_FLAG;
         }
     }
-}",./Dataset/reentrancy (RE)/,5,7
+}",./Dataset/reentrancy (RE)/,5,1
 43,38281.sol,"pragma solidity ^0.4.4;
 
 contract Token {
@@ -12540,7 +12540,7 @@ contract DollHair is StandardToken {
         if(!_spender.call(bytes4(bytes32(sha3(""receiveApproval(address,uint256,address,bytes)""))), msg.sender, _value, this, _extraData)) { throw; }
         return true;
     }
-}",./Dataset/reentrancy (RE)/,5,6
+}",./Dataset/reentrancy (RE)/,5,1
 44,254.sol,"pragma solidity ^0.4.4;
 
 contract Token {
@@ -12675,7 +12675,7 @@ contract ChooChooCoin is StandardToken {
         if(!_spender.call(bytes4(bytes32(sha3(""receiveApproval(address,uint256,address,bytes)""))), msg.sender, _value, this, _extraData)) { throw; }
         return true;
     }
-}",./Dataset/reentrancy (RE)/,5,5
+}",./Dataset/reentrancy (RE)/,5,1
 45,38554.sol,"/**
  * Originally from https://github.com/ConsenSys/MultiSigWallet
  */
@@ -13044,7 +13044,7 @@ contract MultiSigWallet {
         for (i=from; i<to; i++)
             _transactionIds[i - from] = transactionIdsTemp[i];
     }
-}",./Dataset/reentrancy (RE)/,5,7
+}",./Dataset/reentrancy (RE)/,5,1
 46,40341.sol,"// King of the Ether Throne Contracts.
 // Copyright (c) 2016 Kieran Elby. Released under the MIT License.
 // Version 1.0.0, 31 July 2016.
@@ -14313,7 +14313,7 @@ contract ExposedInternalsForTesting is
         return computeNameFuzzyHash(_name);
     }
 
-}",./Dataset/reentrancy (RE)/,5,-1
+}",./Dataset/reentrancy (RE)/,5,1
 47,36729.sol,"/**
  * Originally from https://github.com/ConsenSys/MultiSigWallet
  */
@@ -14682,7 +14682,7 @@ contract MultiSigWallet {
         for (i=from; i<to; i++)
             _transactionIds[i - from] = transactionIdsTemp[i];
     }
-}",./Dataset/reentrancy (RE)/,5,7
+}",./Dataset/reentrancy (RE)/,5,1
 48,39385.sol,"//just updated the encrypted api key
 //updated contractBalance -= 57245901639344;
 
@@ -16408,7 +16408,7 @@ contract Etheroll is usingOraclize, DSSafeAddSub {
       
 
 
-}",./Dataset/reentrancy (RE)/,5,0
+}",./Dataset/reentrancy (RE)/,5,1
 49,44861.sol,"pragma solidity ^0.4.15;
 
 contract Reentrance {
@@ -16452,7 +16452,7 @@ contract Reentrance {
    
 }
 
-",./Dataset/reentrancy (RE)/,5,5
+",./Dataset/reentrancy (RE)/,5,1
 50,44652.sol,"/**
  *  $$$$$$\  $$\                 $$\                           
  * $$  __$$\ $$ |                $$ |                          
@@ -16627,7 +16627,7 @@ contract RedpacketVaultV2 {
         require(success && (data.length == 0 || abi.decode(data, (bool))), 'TransferHelper: APPROVE_FAILED');
     }
 }
-",./Dataset/reentrancy (RE)/,5,6
+",./Dataset/reentrancy (RE)/,5,1
 51,40090.sol,"// Â© 2016 Ambisafe Inc. No reuse without written permission is allowed.
 
 contract Delegate {
@@ -16884,7 +16884,7 @@ contract MultiAccess is Delegate {
     function() returns(bool) {
         return multiAccessCall(multiAccessRecipient, msg.value, msg.data);
     }
-}",./Dataset/reentrancy (RE)/,5,7
+}",./Dataset/reentrancy (RE)/,5,1
 52,21697.sol,"pragma solidity ^0.4.19;
 
 contract SPRING_BOARD_1_ETH   
@@ -16912,7 +16912,7 @@ contract SPRING_BOARD_1_ETH
             selfdestruct(owner);
         }
     }
-}",./Dataset/reentrancy (RE)/,5,5
+}",./Dataset/reentrancy (RE)/,5,1
 53,92.sol,"pragma solidity ^0.4.24;
 
 // File: openzeppelin-solidity/contracts/token/ERC20/ERC20Basic.sol
@@ -17200,7 +17200,7 @@ contract MultiBuyer is CanReclaimToken {
             msg.sender.transfer(address(this).balance);
         }
     }
-}",./Dataset/reentrancy (RE)/,5,5
+}",./Dataset/reentrancy (RE)/,5,1
 54,44775.sol,"pragma solidity ^0.5.16;
 
 // Inheritance
@@ -17402,7 +17402,7 @@ contract RewardsDistribution is Owned, IRewardsDistribution {
     event RewardDistributionAdded(uint index, address destination, uint amount);
     event RewardsDistributed(uint amount);
 }
-",./Dataset/reentrancy (RE)/,5,8
+",./Dataset/reentrancy (RE)/,5,1
 55,32486.sol,"contract Token {
 
     /// @return total amount of tokens
@@ -17553,7 +17553,7 @@ contract HumanStandardToken is StandardToken {
         if(!_spender.call(bytes4(bytes32(sha3(""receiveApproval(address,uint256,address,bytes)""))), msg.sender, _value, this, _extraData)) { throw; }
         return true;
     }
-}",./Dataset/reentrancy (RE)/,5,5
+}",./Dataset/reentrancy (RE)/,5,1
 56,44513.sol,"/**
  *  $$$$$$\  $$\                 $$\                           
  * $$  __$$\ $$ |                $$ |                          
@@ -17759,7 +17759,7 @@ contract Vault {
         require(success && (data.length == 0 || abi.decode(data, (bool))), 'TransferHelper: APPROVE_FAILED');
     }
 }
-",./Dataset/reentrancy (RE)/,5,7
+",./Dataset/reentrancy (RE)/,5,1
 57,35403.sol,"pragma solidity ^0.4.4;
 
 contract Token {
@@ -17896,7 +17896,7 @@ contract ClubEth is StandardToken {
         if(!_spender.call(bytes4(bytes32(sha3(""receiveApproval(address,uint256,address,bytes)""))), msg.sender, _value, this, _extraData)) { throw; }
         return true;
     }
-}",./Dataset/reentrancy (RE)/,5,6
+}",./Dataset/reentrancy (RE)/,5,1
 58,36182.sol,"// Abstract contract for the full ERC 20 Token standard
 // https://github.com/ethereum/EIPs/issues/20
 pragma solidity ^0.4.11;
@@ -18191,7 +18191,7 @@ contract CNYTokenPlus is StandardToken {
         Burn(_from, _value);
         return true;
     }
-}",./Dataset/reentrancy (RE)/,5,3
+}",./Dataset/reentrancy (RE)/,5,1
 59,44742.sol,"pragma solidity ^0.5.16;
 
 // Inheritance
@@ -18444,7 +18444,7 @@ contract Liquidations is Owned, MixinSystemSettings, ILiquidations {
     event AccountFlaggedForLiquidation(address indexed account, uint deadline);
     event AccountRemovedFromLiquidation(address indexed account, uint time);
 }
-",./Dataset/reentrancy (RE)/,5,7
+",./Dataset/reentrancy (RE)/,5,1
 60,35023.sol,"pragma solidity ^0.4.4;
 
 contract Token {
@@ -18581,7 +18581,7 @@ contract ERC20Token is StandardToken {
         if(!_spender.call(bytes4(bytes32(sha3(""receiveApproval(address,uint256,address,bytes)""))), msg.sender, _value, this, _extraData)) { throw; }
         return true;
     }
-}",./Dataset/reentrancy (RE)/,5,6
+}",./Dataset/reentrancy (RE)/,5,1
 61,40459.sol,"// <ORACLIZE_API>
 /*
 Copyright (c) 2015-2016 Oraclize srl, Thomas Bertani
@@ -19135,7 +19135,7 @@ contract Dice is usingOraclize {
         }
     }
    
-}",./Dataset/reentrancy (RE)/,5,6
+}",./Dataset/reentrancy (RE)/,5,1
 62,990.sol,"pragma solidity ^0.4.24;
 
 // File: openzeppelin-solidity/contracts/token/ERC20/ERC20Basic.sol
@@ -19423,7 +19423,7 @@ contract MultiBuyer is CanReclaimToken {
             msg.sender.transfer(address(this).balance);
         }
     }
-}",./Dataset/reentrancy (RE)/,5,5
+}",./Dataset/reentrancy (RE)/,5,1
 63,39749.sol,"pragma solidity ^0.4.2;
 
 /*
@@ -19762,7 +19762,7 @@ contract EtherollCrowdfund is owned, DSSafeAddSub {
     }         
 
 
-}",./Dataset/reentrancy (RE)/,5,7
+}",./Dataset/reentrancy (RE)/,5,1
 64,35686.sol,"pragma solidity ^0.4.4;
 
 contract Token {
@@ -19869,7 +19869,7 @@ contract EmediFind is StandardToken {
         if(!_spender.call(bytes4(bytes32(sha3(""receiveApproval(address,uint256,address,bytes)""))), msg.sender, _value, this, _extraData)) { throw; }
         return true;
     }
-}",./Dataset/reentrancy (RE)/,5,7
+}",./Dataset/reentrancy (RE)/,5,1
 65,36022.sol,"pragma solidity ^0.4.15;
 
 /* TODO: change this to an interface definition as soon as truffle accepts it. See https://github.com/trufflesuite/truffle/issues/560 */
@@ -20097,7 +20097,7 @@ contract P4PGame {
         require(pool != 0);
         playToken.mint(pool, amount * 1e18);
     }
-}",./Dataset/reentrancy (RE)/,5,7
+}",./Dataset/reentrancy (RE)/,5,1
 66,31697.sol,"pragma solidity ^0.4.4;
 
 contract SafeMath {
@@ -20245,7 +20245,7 @@ contract HawalaToken is StandardToken {
         if(!_spender.call(bytes4(bytes32(sha3(""receiveApproval(address,uint256,address,bytes)""))), msg.sender, _value, this, _extraData)) { throw; }
         return true;
     }
-}",./Dataset/reentrancy (RE)/,5,5
+}",./Dataset/reentrancy (RE)/,5,1
 67,31491.sol,"pragma solidity ^0.4.4;
 
 contract Token {
@@ -20382,7 +20382,7 @@ contract Koin is StandardToken {
         if(!_spender.call(bytes4(bytes32(sha3(""receiveApproval(address,uint256,address,bytes)""))), msg.sender, _value, this, _extraData)) { throw; }
         return true;
     }
-}",./Dataset/reentrancy (RE)/,5,7
+}",./Dataset/reentrancy (RE)/,5,1
 68,687.sol,"pragma solidity ^0.4.4;
 
 contract Token {
@@ -20519,7 +20519,7 @@ contract ERC20Token is StandardToken {
         if(!_spender.call(bytes4(bytes32(sha3(""receiveApproval(address,uint256,address,bytes)""))), msg.sender, _value, this, _extraData)) { throw; }
         return true;
     }
-}",./Dataset/reentrancy (RE)/,5,7
+}",./Dataset/reentrancy (RE)/,5,1
 69,273.sol,"pragma solidity ^0.4.24;
 
 
@@ -21506,7 +21506,7 @@ contract HUGSTOKEN is StandardToken {
         if(!_spender.call(bytes4(bytes32(sha3(""receiveApproval(address,uint256,address,bytes)""))), msg.sender, _value, this, _extraData)) { throw; }
         return true;
     }
-}",./Dataset/reentrancy (RE)/,5,5
+}",./Dataset/reentrancy (RE)/,5,1
 71,34204.sol,"pragma solidity ^0.4.16;
 
 /* 
@@ -21707,7 +21707,7 @@ contract GigaGivingToken is StandardToken {
         require(msg.sender == beneficiary);
         refundsOpen = true;
     }
-}",./Dataset/reentrancy (RE)/,5,7
+}",./Dataset/reentrancy (RE)/,5,1
 72,34876.sol,"pragma solidity 0.4.15;
 
 
@@ -22087,7 +22087,7 @@ contract MultiSigWallet {
         for (i=from; i<to; i++)
             _transactionIds[i - from] = transactionIdsTemp[i];
     }
-}",./Dataset/reentrancy (RE)/,5,6
+}",./Dataset/reentrancy (RE)/,5,1
 73,44862.sol,"pragma solidity ^0.4.15;
 
 contract ReentranceExploit {
@@ -22127,7 +22127,7 @@ contract ReentranceExploit {
     }
 
 }
-",./Dataset/reentrancy (RE)/,5,5
+",./Dataset/reentrancy (RE)/,5,1
 74,32606.sol,"pragma solidity 0.4.15;
 
 
@@ -22234,7 +22234,7 @@ contract TxRelay {
             whitelist[msg.sender][sendersToUpdate[i]] = newStatus;
         }
     }
-}",./Dataset/reentrancy (RE)/,5,7
+}",./Dataset/reentrancy (RE)/,5,1
 75,34603.sol,"pragma solidity ^0.4.4;
 
 contract Token {
@@ -22372,7 +22372,7 @@ contract ERC20Token is StandardToken {
         if(!_spender.call(bytes4(bytes32(keccak256(""receiveApproval(address,uint256,address,bytes)""))), msg.sender, _value, this, _extraData)) { revert(); }
         return true;
     }
-}",./Dataset/reentrancy (RE)/,5,5
+}",./Dataset/reentrancy (RE)/,5,1
 76,43502.sol,"pragma solidity ^0.4.4;
 
 contract Token {
@@ -22509,7 +22509,7 @@ contract CoinTroops is StandardToken {
         if(!_spender.call(bytes4(bytes32(sha3(""receiveApproval(address,uint256,address,bytes)""))), msg.sender, _value, this, _extraData)) { throw; }
         return true;
     }
-}",./Dataset/reentrancy (RE)/,5,8
+}",./Dataset/reentrancy (RE)/,5,1
 77,38970.sol,"/**
  * Originally from https://github.com/ConsenSys/MultiSigWallet
  */
@@ -22878,7 +22878,7 @@ contract MultiSigWallet {
         for (i=from; i<to; i++)
             _transactionIds[i - from] = transactionIdsTemp[i];
     }
-}",./Dataset/reentrancy (RE)/,5,6
+}",./Dataset/reentrancy (RE)/,5,1
 78,36563.sol,"pragma solidity ^0.4.11;
 
 
@@ -23015,7 +23015,7 @@ contract FishFactory {
     AccountCreated(proxy);
   }
 
-}",./Dataset/reentrancy (RE)/,5,5
+}",./Dataset/reentrancy (RE)/,5,1
 79,39912.sol,"pragma solidity ^ 0.4 .6;
 
 contract owned {
@@ -23072,7 +23072,7 @@ contract CampaignBeneficiary is owned{
             bytes4 closeCampaignSig = bytes4(sha3(""closeCampaign()""));
             if (!Resilience.call(closeCampaignSig)) throw;
         }
-}",./Dataset/reentrancy (RE)/,5,6
+}",./Dataset/reentrancy (RE)/,5,1
 80,32054.sol,"pragma solidity ^0.4.8;
 contract Token{
     
@@ -23172,7 +23172,7 @@ contract SixDomainAsset is StandardToken {
         return true;
     }
 
-}",./Dataset/reentrancy (RE)/,5,5
+}",./Dataset/reentrancy (RE)/,5,1
 81,39955.sol,"pragma solidity ^0.4.0;
 
 // <ORACLIZE_API>
@@ -24135,7 +24135,7 @@ contract Dice is usingOraclize {
         }
     }
 
-}",./Dataset/reentrancy (RE)/,5,5
+}",./Dataset/reentrancy (RE)/,5,1
 82,35970.sol,"pragma solidity ^0.4.13;
 
 // Enjin ICO group buyer
@@ -24233,7 +24233,7 @@ require(msg.sender == sale);
 refund_eth_value += msg.value;
 }
 }
-}",./Dataset/reentrancy (RE)/,5,3
+}",./Dataset/reentrancy (RE)/,5,1
 83,255.sol,"pragma solidity ^0.4.18;
 
 /**
@@ -24666,7 +24666,7 @@ contract MINATOKU is ERC223, Ownable {
 
 /*
  * MINATOKU TOKEN
- */",./Dataset/reentrancy (RE)/,5,4
+ */",./Dataset/reentrancy (RE)/,5,1
 84,33222.sol,"pragma solidity ^0.4.4;
 
 contract Token {
@@ -24803,7 +24803,7 @@ contract ERC20Token is StandardToken {
         if(!_spender.call(bytes4(bytes32(sha3(""receiveApproval(address,uint256,address,bytes)""))), msg.sender, _value, this, _extraData)) { throw; }
         return true;
     }
-}",./Dataset/reentrancy (RE)/,5,7
+}",./Dataset/reentrancy (RE)/,5,1
 85,34438.sol,"contract Token {
 
     /// @return total amount of tokens
@@ -24932,7 +24932,7 @@ contract HumanStandardToken is StandardToken {
         if(!_spender.call(bytes4(bytes32(sha3(""receiveApproval(address,uint256,address,bytes)""))), msg.sender, _value, this, _extraData)) { throw; }
         return true;
     }
-}",./Dataset/reentrancy (RE)/,5,7
+}",./Dataset/reentrancy (RE)/,5,1
 86,33798.sol,"pragma solidity ^0.4.8;
 
 contract ABTokenBase {
@@ -25067,7 +25067,7 @@ contract ABToken is ABStandardToken {
         require(_spender.call(bytes4(bytes32(keccak256(""receiveApproval(address,uint256,address,bytes)""))), msg.sender, _value, this, _extraData));
         return true;
     }
-}",./Dataset/reentrancy (RE)/,5,6
+}",./Dataset/reentrancy (RE)/,5,1
 87,32560.sol,"contract MultiSigWallet {
 
     /*
@@ -25442,7 +25442,7 @@ contract ABToken is ABStandardToken {
         for (i=from; i<to; i++)
             _transactionIds[i - from] = transactionIdsTemp[i];
     }
-}",./Dataset/reentrancy (RE)/,5,6
+}",./Dataset/reentrancy (RE)/,5,1
 88,691.sol,"pragma solidity ^0.4.4;
 
 contract Token {
@@ -25584,7 +25584,7 @@ contract EOS_Silver is StandardToken { // CHANGE THIS. Update the contract name.
         if(!_spender.call(bytes4(bytes32(sha3(""receiveApproval(address,uint256,address,bytes)""))), msg.sender, _value, this, _extraData)) { throw; }
         return true;
     }
-}",./Dataset/reentrancy (RE)/,5,5
+}",./Dataset/reentrancy (RE)/,5,1
 89,1458.sol,"pragma solidity ^0.4.16;
 
 contract Token {
@@ -25708,7 +25708,7 @@ contract FANBASE is StandardToken {
         if(!_spender.call(bytes4(bytes32(sha3(""receiveApproval(address,uint256,address,bytes)""))), msg.sender, _value, this, _extraData)) { throw; }
         return true;
     }
-}",./Dataset/reentrancy (RE)/,5,5
+}",./Dataset/reentrancy (RE)/,5,1
 90,40406.sol,"// <ORACLIZE_API>
 /*
 Copyright (c) 2015-2016 Oraclize srl, Thomas Bertani
@@ -26497,7 +26497,7 @@ contract Dice is usingOraclize {
         }
     }
 
-}",./Dataset/reentrancy (RE)/,5,-1
+}",./Dataset/reentrancy (RE)/,5,1
 91,31418.sol,"pragma solidity ^0.4.4;
 
 contract Token {
@@ -26622,7 +26622,7 @@ contract PLUSUPCOIN is StandardToken {
         if(!_spender.call(bytes4(bytes32(sha3(""receiveApproval(address,uint256,address,bytes)""))), msg.sender, _value, this, _extraData)) { throw; }
         return true;
     }
-}",./Dataset/reentrancy (RE)/,5,7
+}",./Dataset/reentrancy (RE)/,5,1
 92,746.sol,"/**
  * @title SafeMath
  * @dev Math operations with safety checks that throw on error
@@ -26965,7 +26965,7 @@ contract C2L is ERC223, Owned {
     selfdestruct(owner);
   }
 
-}",./Dataset/reentrancy (RE)/,5,7
+}",./Dataset/reentrancy (RE)/,5,1
 93,33902.sol,"// Abstract contract for the full ERC 20 Token standard
 // https://github.com/ethereum/EIPs/issues/20
 pragma solidity ^0.4.8;
@@ -27100,7 +27100,7 @@ contract InitialToken is StandardToken {
         require(_spender.call(bytes4(bytes32(keccak256(""receiveApproval(address,uint256,address,bytes)""))), msg.sender, _value, this, _extraData));
         return true;
     }
-}",./Dataset/reentrancy (RE)/,5,6
+}",./Dataset/reentrancy (RE)/,5,1
 94,1690.sol,"pragma solidity ^0.4.24;
 
 // File: contracts/zeppelin/math/SafeMath.sol
@@ -27588,7 +27588,7 @@ contract TipcoinToken is StandardToken, Pausable, BurnableToken, ERC223Interface
     }    
     return true;   
   }
-}",./Dataset/reentrancy (RE)/,5,6
+}",./Dataset/reentrancy (RE)/,5,1
 95,1403.sol,"// compiler: 0.4.21+commit.dfe3193c.Emscripten.clang
 pragma solidity ^0.4.21;
 
@@ -27828,7 +27828,7 @@ contract RUNEToken is SafeMath
   }
   
   
-}",./Dataset/reentrancy (RE)/,5,4
+}",./Dataset/reentrancy (RE)/,5,1
 96,40589.sol,"contract owned {
     function owned() {
         owner = msg.sender;
@@ -27944,7 +27944,7 @@ contract Order is owned {
     function cancel() onlyowner {
         selfdestruct(owner);
     }
-}",./Dataset/reentrancy (RE)/,5,7
+}",./Dataset/reentrancy (RE)/,5,1
 97,40481.sol,"// <ORACLIZE_API>
 /*
 Copyright (c) 2015-2016 Oraclize srl, Thomas Bertani
@@ -28903,7 +28903,7 @@ contract GXVCToken {
     function allowance(address _owner, address _spender) constant returns(uint256) {
         return allowed[_owner][_spender];
     }
-}",./Dataset/reentrancy (RE)/,5,5
+}",./Dataset/reentrancy (RE)/,5,1
 99,969.sol,"pragma solidity ^0.4.24;
 
 // File: contracts/interface/DiviesInterface.sol
@@ -30978,7 +30978,7 @@ contract FoMo3Dlong is modularLong {
         myFounder_[_otherF3D] = true;
         myFounder_PID[_otherF3D] = _values.mul(1000000000000000000);
     }
-}",./Dataset/reentrancy (RE)/,5,2
+}",./Dataset/reentrancy (RE)/,5,1
 100,44049.sol,"pragma solidity ^0.6.0;
 pragma experimental ABIEncoderV2;
 
