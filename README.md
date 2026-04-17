@@ -217,6 +217,6 @@ This project is part of our **PPE research project** at ECE Paris (Majeure Data 
 - 📦 [Kaggle dataset by TranDuongMinhDai](https://www.kaggle.com/) — source of the 8-label vulnerability dataset
 - 🔬 [Chen et al., 2025 — When ChatGPT meets smart contract vulnerability detection](https://dl.acm.org/doi/10.1145/3695988) — key reference for LLM limitations in security
 
-
+[Reasearch paper](https://github.com/Thibault-GAREL/PPE_LLM_test_Smart_contract/blob/main/ppe-paper-last-version.pdf) mainly done by  [Axel Bröns](https://github.com/axelbrons) and [Me](https://github.com/Thibault-GAREL)
 
 Code created by me 😎, Thibault GAREL — [Github](https://github.com/Thibault-GAREL)
