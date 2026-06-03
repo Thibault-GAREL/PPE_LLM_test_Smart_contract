@@ -19,6 +19,10 @@
 
 This repository is the **LLM zero-shot baseline** component of our research paper: **"Graph-Aware Transformers for Smart Contract Vulnerability Detection"** (ECE Paris, April 2026). Using **Ollama** to run local LLMs (llama3.2, deepseek-coder:6.7b, qwen2.5-coder:7b, TinyLlama, etc.), we benchmark how well off-the-shelf generative models can classify **Solidity smart contracts** into vulnerability categories — without any fine-tuning. The results form the baseline that our **GraphCodeBERT** fine-tuned model (see [graphs-ppe](https://github.com/axelbrons/graphs-ppe)) significantly outperforms, proving the need for structure-aware, embedding-based approaches in blockchain security.
 
+I tried to improve the best LLM in [**this LoRA code**](https://github.com/Thibault-GAREL/PPE_LoRa_Smart_contract).
+
+Check the link to see the paper and all the docs !
+
 ---
 
 ## ⚙️ Features
@@ -218,5 +222,7 @@ This project is part of our **PPE research project** at ECE Paris (Majeure Data 
 - 🔬 [Chen et al., 2025 — When ChatGPT meets smart contract vulnerability detection](https://dl.acm.org/doi/10.1145/3695988) — key reference for LLM limitations in security
 
 [Reasearch paper](https://github.com/Thibault-GAREL/PPE_LLM_test_Smart_contract/blob/main/ppe-paper-last-version.pdf) mainly done by  [Axel Bröns](https://github.com/axelbrons) and [Me](https://github.com/Thibault-GAREL)
+
+I tried to improve the best LLM with a LoRA in [this code](https://github.com/Thibault-GAREL/PPE_LoRa_Smart_contract)
 
 Code created by me 😎, Thibault GAREL — [Github](https://github.com/Thibault-GAREL)
