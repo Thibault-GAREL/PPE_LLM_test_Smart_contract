@@ -23,23 +23,18 @@ I tried to improve the best LLM in [**this LoRA code**](https://github.com/Thiba
 
 Check the link to see the paper and all the docs !
 
----
+<details>
+<summary>⚙️ <b>Feature list</b></summary>
 
-## ⚙️ Features
+- **Zero-shot prompting** pipeline, sends raw Solidity code to any Ollama-compatible LLM and extracts a single digit prediction
+- **Flexible classification**: supports **4-label** (Delegatecall, Overflow, Reentrancy, Timestamp) and **8-label** (+ Block Number, Ether Frozen, Strict Equality, Unchecked Call) dataset configs
+- **Automatic evaluation**: computes precision, confusion matrix, and per-class breakdown after each run
+- **CSV export**: saves all predictions alongside ground-truth labels for offline analysis
+- **Multi-model support**: swap between `llama3.2`, `deepseek-coder:6.7b`, `qwen2.5-coder:7b`, `tinyllama:1.1b`, `codellama`, `mistral` via a single config line
+- **Progress tracking**: `tqdm` progress bar with per-contract timing
+- **Research-grade results**: data used directly in our published paper comparing LLMs vs. fine-tuned GraphCodeBERT
 
-  🧪 **Zero-shot prompting** pipeline — sends raw Solidity code to any Ollama-compatible LLM and extracts a single digit prediction
-
-  🏷️ **Flexible classification** — supports **4-label** (Delegatecall, Overflow, Reentrancy, Timestamp) and **8-label** (+ Block Number, Ether Frozen, Strict Equality, Unchecked Call) dataset configs
-
-  📊 **Automatic evaluation** — computes precision, confusion matrix, and per-class breakdown after each run
-
-  💾 **CSV export** — saves all predictions alongside ground-truth labels for offline analysis
-
-  🔄 **Multi-model support** — swap between `llama3.2`, `deepseek-coder:6.7b`, `qwen2.5-coder:7b`, `tinyllama:1.1b`, `codellama`, `mistral` via a single config line
-
-  ⏱️ **Progress tracking** — `tqdm` progress bar with per-contract timing
-
-  🔬 **Research-grade results** — data used directly in our published paper comparing LLMs vs. fine-tuned GraphCodeBERT
+</details>
 
 ---
 
@@ -73,23 +68,7 @@ Check the link to see the paper and all the docs !
 
 ---
 
-## ⚙️ How it works
-
-  📂 The CSV dataset (`SC_4label.csv` or `SC_Vuln_8label.csv`) is loaded via `csv_loader.py`, which handles Solidity code containing commas and special characters
-
-  🧾 For each contract, `llm_classifier_v2.py` builds a **zero-shot prompt** asking the model to output a single digit (0–4 or 0–8) matching the vulnerability type
-
-  📡 The prompt is sent to the **Ollama local API** (`http://localhost:11434`) via an HTTP POST request — no internet required
-
-  🔍 The raw LLM response is parsed to extract the first valid digit; invalid responses are flagged as `-1` (error)
-
-  📈 After all contracts are classified, precision, per-class breakdown, and a full confusion matrix are computed and printed
-
-  💾 Final results (ground-truth label + LLM prediction) are exported to a CSV file for further analysis
-
----
-
-## 🗺️ Schema
+## 🗺️ How it works
 
 ```text
 ┌─────────────────────┐
@@ -136,6 +115,13 @@ Check the link to see the paper and all the docs !
 |  6 | TP    | Timestamp Dependency      |
 |  7 | UC    | Unchecked External Call   |
 |  8 | —     | Normal (no vulnerability) |
+
+- The CSV dataset (`SC_4label.csv` or `SC_Vuln_8label.csv`) is loaded via `csv_loader.py`, which handles Solidity code containing commas and special characters
+- For each contract, `llm_classifier_v2.py` builds a **zero-shot prompt** asking the model to output a single digit (0–4 or 0–8) matching the vulnerability type
+- The prompt is sent to the **Ollama local API** (`http://localhost:11434`) via an HTTP POST request, no internet required
+- The raw LLM response is parsed to extract the first valid digit; invalid responses are flagged as `-1` (error)
+- After all contracts are classified, precision, per-class breakdown, and a full confusion matrix are computed and printed
+- Final results (ground-truth label + LLM prediction) are exported to a CSV file for further analysis
 
 ---
 
